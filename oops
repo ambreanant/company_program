@@ -1,0 +1,204 @@
+
+	****************************************************  Polymorphism   ******************************************************
+
+
+	poly mean many and morphism mean forms 
+	polymorphism means the ability to have many forms. If we say it in other words, "Polymorphism describes a pattern in Object Oriented Programming in which a class has varying functionality while sharing a common interfaces.
+	ex: 
+	water: solid, liquid, gas
+	shapes: rectangle, triangle, square			ex.	Class Test					 * if Test class contain Abstract method then override
+	sound: barking, roar							{	function show() 				all the method in child class
+														{ echo "1"; } 			 * if interface then child class check( override method)
+	Types of Polymorphism :							}									contain higher access specifier 
+	1) compile time Polymorphism 					Class Demo extends Test		 * final, static and private method can not be overriden
+		-method overloading							{	function show()
+		-static Polymorphism 							{ echo "2"; }
+	2) Run time Polymorphism 						}
+		-method overriding 							$obj = new Demo();
+		-dynamic polymorphism 						$obj->show();	//output: 2
+
+	Using method overring we can achieve run-time polymorphism. using this we can change parent class implementation and write new self implementation of child class. it mean we can change implementation according to our requirement.Parent class method specifier must be higher than child class method.
+
+
+						Method Overloading 					Method Overriding
+
+				1) Same Method Name						1) Same Method Name
+				2) Method Within same class 			2) Method different class
+				3) Different Arguments 					3) Same Arguments
+					-No. of argument 						-No. of argument
+					-Type of argument 						-Type of argument
+					-sequence of argument 					-sequence of argument
+				4)										4)Inheritance (IA-A relationship)
+
+
+	If class method throws Exception then parent class also throws same or higher level exception is must.if parent class doesn't throws exception then child class can thrownonly unchecked exception.
+
+	checked exception : Exception
+	uncked exception : ArithmeticExceptionn
+	(Run in all this condition)
+	ex. class Test
+		{
+			function show() throws RuntimeException		//same 					//same 		//blank
+			{}
+		}
+		class Demo extends Test
+		{
+			function show() throws RuntimeException		//ArithmeticExceptionn	//blank		//ArithmeticException
+			{}
+		}
+
+
+		(Error in this condition) if
+		function show() throws RuntimeException 	//blank
+
+		function show() throws RuntimeException		//Exception
+
+
+
+
+	****************************************************  Encapsulation   ******************************************************
+
+		Encapsulation is mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit.
+		mainly used for data hiding.
+		* Wrapping data in single unit calles Encapsulation
+
+		ex. Capsule : Main medicine enclodes in capsule
+			Car		: Engine, braking and gear system tec. are hided from driver.
+
+
+		Step to achieve encapsulation
+		1) Declare the variables of a class as private
+		2) Provide public setter and getter methods to modify and view the variables values.
+
+		ex. Class Test
+			{
+				private $a;		//-> data-hiding
+				function ser($v) 	//method that acting on data
+				{
+					$this->a = $v
+				}
+				function get() 	//method that acting on data
+				{
+					echo $this->a;
+				}
+			}
+			$obj = new Test();
+			$obj->set(5);
+			$obj->get();	//output 5
+
+
+			There are types of Access Specifier / Modifiers
+
+		1) Public : public property or method can be access from anywhere. we can assign variable value of public variable using object.
+		2) Private : private property or method can be access only within same class.
+					 private property can not be access outside class or with object.
+					 In inheritance, child class can not access parent's private property or methods.
+		3) Protected : can not access protected property or method ouside class or object.
+					   protected property or class can be accessed within same class and child class can access parent's or grand parent's protected property or method.
+
+
+
+	****************************************************  Abstract   ******************************************************
+
+	
+
+		Abstratction is hiding internal implementation and just highlighting the setup services that we are offering
+		The main purpose of abstraction is hiding the unnecessary details from the users
+
+		As in the Car case, relevant parts like stearing, gear, horn, accelerator, breaks etc are show to driver because they are necessary for driving. But the driver need not know the internal functioning of engine,gear,break etc.
+		Thus, showing relevant data to the user and hiding of implementation or details from the user is abstration.
+
+
+		1) A method without body (no implementation) is know as abstract method.
+		2) A method must always be declared in an abstract class or we can say that if a class has an abstract method, it should be 	   declared abstract as well.
+		3) If a regular class extends an abstract class, then the class must have to implement all the abstract method of abstract 		   parent class or it has to declared abstract as well.
+		4) Abstract method in an abstract class are meant to be overriden in derived concrete class otherwise compile time error will 	   be thrown.
+		5) Abstract classes can not be instantiated, mean we can't create an object of abstratc class.
+
+		ex.
+			abstract class Vehicle
+			{
+				abstract function start();						Abstratction 								Encapsulation
+			}												1) Abstration is details hiding 			1) Encapsulation is data hiding
+			class Car extends Vehicle 							( Implementation hiding ) 				( Information hiding )
+			{												2) Data abstraction deals with exposing 	2)Encapsulation groups together 
+				function start()								 the interface to the user and hiding 	data and method that act
+				{												 the details of Implementation 			upon the data.
+					echo "Car start with key";
+				}
+			}
+			class Scooter extends Vehicle
+			{
+				function start()
+				{
+					echo "Scooter start with kick";
+				}
+			}
+			$c = new Car()'
+			$c->start();	//output : Car start with key
+			$s = new Scooter();
+			$s->start();	//output : Scooter start with kick
+
+
+
+	****************************************************  Interface   ******************************************************
+
+			1) Interface are similar to abstract class but having all the methods of abstract type.
+			2) Interface are blue print of the class. it specify what a class must do and not how.
+			3) In interface all method are by default public abstract and variable are public static final.
+			4) To inherite interface we write implement keyword. ex. class Test implemtnts I1
+			5) All method in interface mus be implement in implemented class. otherwise compile error occure.
+			6) We can not create object of interface.
+			7) Overriden method must be public access specifier.
+			8) An interface can extend another interface using extends keyword.
+			9) An abstract class can extends another class and implement multiple interface.
+
+			ex.1										ex.2
+				Interface I1								Interface I2
+				{											{ 
+					function show();							function display();
+				}											}
+				class Test implements I1					class Demo implements I1,I2
+				{											{
+					public function show()						public function show()
+					{											{
+						echo "1";									echo "1";
+					}											}
+				}												punlic function display()
+				$obj = new Test();								{
+				$obj->show(); //output : 1							echo "2";
+																}
+															}
+															$obj = new Demo();
+															$obj->show();  //output : 1
+															$obj->display(); //output : 2
+
+
+	****************************************************  Final   ******************************************************
+
+	1) If we create any final variable, it becomes constamt, we can not change the value of final variable.
+	2) If we create any final method, we can not override it.
+	   To acces parent class final method in parent class, using parent class name :: method name 
+	   ex. Father::display();
+	3) If we create any final class, we can not extends it or inherit it.
+
+
+	****************************************************  const   ******************************************************
+
+	There are constants designed to be used by classes, not object. Once you initialize a const variable you can't reinitiate it. const keyword is used to create constant in php class.
+	ex. const $a=10;
+
+	To access const, inside class using self keyword
+	ex. self::$a;
+	To access const, outside class using class name
+	ex. ClassName::$a;
+
+
+	****************************************************  this   ******************************************************
+
+	This keyword is used inside a class, generally within the member function to access non-static member of a class (variable or function) for the current object. whenever we want to call any variable of a class from inside a member function, we use $this to print to the current object which hold the variable.
+
+
+	****************************************************  Bind   ******************************************************
+
+	The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
