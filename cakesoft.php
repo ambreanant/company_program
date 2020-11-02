@@ -11,6 +11,7 @@ while ( --$x > 0) {
 // GROUP BY person_name
 // Having COUNT(*) > 1
 
+<!-- SELECT MAX(daily_avg),person_name FROM worker GROUP BY person_name -->
 // select * from person where daily_avg = (select max(daily_avg) from person) GROUP by person_name Having count(*) > 1
 <!-- select * 
 from (select * from Person order by `person_name`, daily_avg desc, id) x
