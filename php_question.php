@@ -616,3 +616,35 @@ if(isset($_POST['submit']))
     return $x;
   }
 ?>
+
+
+******************************* Find missing number *********************************
+<?php
+$a=[0,1,2,3,4,6,7,8,10,11,12,13,15];
+$position=0;
+$count=0;
+$flag=false;
+findmissingnumber($position,$a);
+function findmissingnumber($position,$a)
+{
+  if($position==sizeof($a)-1)
+      return;
+  
+  for(;$position < $a[sizeof($a)-1];$position++)
+    {
+      if(($a[$position]-$GLOBALS['count'])!=$position)
+            {
+              print("Missing Number is:".($position + $GLOBALS['count']));
+              $flag=true;
+              $GLOBALS['count']++;
+              break;
+            }
+    }
+  if($flag)
+    {
+      $flag=false;
+      findmissingnumber($position,$a);
+    }
+}
+
+?>
