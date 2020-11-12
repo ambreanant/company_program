@@ -618,7 +618,7 @@ if(isset($_POST['submit']))
 ?>
 
 
-******************************* Find missing number *********************************
+******************************* Find missing number ********************************
 <?php
 $a=[0,1,2,3,4,6,7,8,10,11,12,13,15];
 $position=0;
@@ -648,3 +648,24 @@ function findmissingnumber($position,$a)
 }
 
 ?>
+
+******************************* Array sorting without using inbuild function ********************************
+<?php
+$array= array(1, 6, 23, 10, 3, 2, 15,7); 
+
+    for($i=0; $i<count($array)-1; $i++)
+    {
+        for($j=0; $j<count($array)-1; $j++)
+        {
+            if($array[$j]> $array[$j+1]){
+                $temp= $array[$j+1];
+                $array[$j+1]= $array[$j];
+                $array[$j]= $temp;
+            }
+        }
+
+    }
+    print_r($array);
+  ?>
+
+  *******************************  ********************************
