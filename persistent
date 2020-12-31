@@ -1,0 +1,184 @@
+Q 1) caching is used to serve stored data more efficiently . it is commonly used, particularly in large scale distributed system, to allow the most frequently accessed information to be available at a lowe cost in time or resources. since cache capacity is limited, strategies are employed to determine what is in the cache replacement policies. which of the following are true?
+
+Ans: D the data in cache is always consistent with the change made to it. any time it is requested,the most recent version is required
+
+Q 2) Benefits of microservices
+
+Ans: B independent component
+
+Q 3) Which of the following is built on top of a Hadoop framework using the Elastic Compute Cloud?
+
+Ans : A Amazon Elastic MapReduce
+
+Q 4 ) Replication is aconcept of storing multiple copies of the same data. which is the following are true?
+
+Ans: A Replication improves the realiability of the system.
+
+Q 5) Drawbacks of microservices
+
+Ans: D All the Above
+
+Q 6 ) which of the following statements are true about cloud essentials?
+
+Ans : C 
+
+Q 7 ) Which pattern do you seen in the code below
+		java.util.Calender.getInstance();
+
+Ans: B Factory Pattern
+
+Q 8 ) how microservices application can communicate
+
+Ans: E ALl the Above
+
+Q 9 ) Point out the wrong statement.
+
+Ans: B Amazon plans to extend the capabilities of VPC to integrate with other systems in the Amazon cloud computing portfolio
+
+Q 10) in order to improving the performance of system often we have to make the underlying hardware more powerful somehow. horizontal and Vertical scaling are two different approaches to do that. which of the following are are true.
+
+Ans: D
+
+Q 11 ) which is the right answer to the following? A hash table contain 10 bucket and uses liner probing to resolve collision. the key values are integers and the hash function used is. if the values 43,165, 62,123, 142 are interted in the table. in what location would the key value 142 be inserted?
+
+Ans:  D 6
+
+Q 12 ) ____ is a virtual server platform that allow users to create and run virtual machines on Amazon's server farm
+
+Ans: A EC2
+
+Q 13 ) rest is a protocol and a set of operation that many web services confirm to in order to exchange information and interact with each other. which of the following are true
+
+Ans: B 
+
+Q 14 ) which is the right answer to the following
+consider a linked list of n elements. what is the time taken to insert an element pointer
+
+Ans: A O(1)
+
+Q 15 ) there are several commonly known types of attacks that are based on malformed usage of http protocol
+Ans A -
+
+Q 16 ) Http uses status code to indicate how a specific HTTP request was handled. true
+
+Ans: C in case of an unathorized access attempt
+
+Q 17 ) Which is the right ans of the following
+A system uses FIFO policy for page replacement. It has 4 page frames with no pages loaded to begin with. The system first accesses 100 distinct pages in some order and then accesses the same 100 pages but now in the reverse order. How many page faults will occur?
+
+Ans: A 196
+
+Q 18) how many copies of a class static member are shared between objects of a class
+
+Ans: A a copyof the static member is shared by all object of a class
+
+Q 19) identify rules to follow when securing a web application based on rest architecture
+
+Ans: C -
+
+Q 20) quicksort: Best performance
+Let P be the quicksort program where the larger of the first two distinct elements is chosen as the pivot element. Which of the following input permutations will lead the best performance of P?
+Ans: C [1324]
+
+Q 21) consider the following code snippet
+int a =1; while(a < n){ a = a*2;}
+
+Ans: C O(log2(n))
+
+Q 22) key techniques used in security testing are
+
+Ans: A SQL injection
+
+Q 23) Which is the right of the following?
+a public data member with the same name is provided in both base as well as derived classes
+
+Ans: D The program will compile and this is called 'hiding' or 'shadowing'
+
+Q 24) security is one of the most important aspect of any web system. which of the foolowing statement is true
+
+Ans: D -
+
+Q 25 ) is a way of attempting to acquire information such as username, password and credit card details by masquerading as a trustworthy entity is an electronic communication
+
+Ans: B phishing
+
+Q 26) what is the basic programming unit of a PL/SQl code
+
+Ans: D Block
+
+Q 27 ) which of the following are benefits of using oAuth 2.0 over oauth 1.0
+
+Ans: C -
+
+Q 28 ) which of the following does not fall under the category of security exploits
+
+Ans: B Authentication
+
+Q 29) in data partitioning a large dataset is divided into smaller pieces. which of the following is true
+
+Ans: A -
+
+Q 30 ) which of the following statement can be considered best practices in accordance with REST API specifications
+
+Ans: C -
+
+Q 31) which of these distributions follow a normal distribution
+
+Ans: A
+
+Q 32) 
+
+Ans: 
+
+Q 33) consider a joint probability density function f(x) = x^2.(1+y)
+
+Ans: D 1/10
+
+Q 34) database normalization is a common term for most types of databases. in general which of the following are true
+
+Ans: D -
+
+Q 35) the following data are from a simple random sample 7, 1, 9, 13, 10. compute the sample mean, sample standard deviation and sample median.
+
+Ans: D 8, sqrt(20),9
+
+Q 36) which statement is true
+
+Ans: A Non-static member classes must have either default or public accessibility
+
+Q 37) A rider is waiting for a bus and the bus is always X hours late. X is a random variable distributed uniformly on a range [O, A). A priory it is known that A is equal to any one of the following values with equal probability: (1/6), (1/4), (1/3), (1/2). If the bus arrives 12 minutes late (1/5 of an hour), what is the posterior probability for the
+most likely value of A?​
+
+Ans: C -
+
+Q 38 ) out of program
+
+Ans: D -
+
+Q 39) which of the graph below show a very strong positive correlation
+
+Ans: B
+
+Q 40) how many copies of a cstatic member are shared between object of a class
+
+Ans: A a copyof the static member is shared by all object of a class
+
+Q41) if in join operation conditions of join operations are not satisfied then results of operation then result of operation is
+
+Ans: A zero tuples and empty relation
+
+Q 42) which sql function is used to count the number of rows in sql query
+
+Ans:  D COUNT(*)
+
+Q 43) which of the following sql clause is used to delete tuples from a database table
+
+Ans: A DELETE
+
+Q 44) you are required to write a logic in sql to allow values ranging from 1-100 in one of the columns of the customers table. which is the best way
+
+Ans: B check contraints
+
+Q 45) why do we have to create a primary index on a primary key
+
+Ans: C both(a) & (b)
